@@ -4,7 +4,7 @@ import { KeyboardAvoidingView, Platform } from 'react-native'
 import Page from '../../components/Page'
 import styles from './styles'
 
-const App = () => {
+const Root = () => {
   return (
     <KeyboardAvoidingView
       behavior= {(Platform.OS === 'ios') ? 'padding' : null}
@@ -14,4 +14,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Root
