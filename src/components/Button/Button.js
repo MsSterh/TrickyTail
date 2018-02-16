@@ -14,15 +14,17 @@ export default class Button extends Component {
     const { onPress, text } = this.props
 
     return (
-      <TouchableHighlight
-        onPress={onPress}
-        style={styles.buttonContainer}>
-        <View style={styles.buttonView}>
-          <Text style={styles.buttonText}>
-            {text}
-          </Text>
-        </View>
-      </TouchableHighlight>
+      <View style={styles.view}>
+        <TouchableHighlight
+          onPress={onPress}
+          style={styles.buttonContainer}>
+          <View style={styles.buttonView}>
+            <Text style={styles.buttonText}>
+              {text}
+            </Text>
+          </View>
+        </TouchableHighlight>
+      </View>
     )
   }
 }

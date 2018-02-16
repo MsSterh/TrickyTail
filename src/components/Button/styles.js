@@ -2,10 +2,17 @@ import { StyleSheet } from 'react-native'
 import { COLORS } from '../../constants'
 
 export default StyleSheet.create({
+  view: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20
+  },
   buttonContainer: {
-    backgroundColor: COLORS.RED,
+    backgroundColor: COLORS.INPUT,
     borderRadius: 25,
-    height: 50
+    height: 50,
+    paddingHorizontal: 20
   },
   buttonView: {
     flexDirection: 'row',
@@ -16,7 +23,7 @@ export default StyleSheet.create({
   buttonText: {
     backgroundColor: 'transparent',
     color: COLORS.WHITE,
-    fontSize: 13,
+    fontSize: 16,
     textAlign: 'center'
   }
 })

@@ -11,6 +11,7 @@ const page = (state = initialState, action) => {
       ...state,
       current: action.page
     }
+
   default:
     return state
   }

@@ -13,16 +13,16 @@ export default StyleSheet.create({
     padding: 10,
     minHeight: Dimensions.get('window').height
   },
-  welcome: {
+  title: {
     fontSize: SIZES.TITLE,
     textAlign: 'center',
-    margin: 10
+    marginVertical: 10
   },
-  instructions: {
+  paragraph: {
     fontSize: SIZES.FONT,
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
+    color: COLORS.FONT,
+    marginVertical: 10
   },
   hintView: {
     backgroundColor: COLORS.FONT,
