@@ -1,31 +1,35 @@
 import React, { Component } from 'react'
 import { TextInput } from 'react-native'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 import styles from './styles'
+import { setInputField } from '../../actions/input'
 
-export default class Input extends Component {
+const mapStateToProps = state => ({
+  text: state.input.text
+})
+
+class Input extends Component {
   static propTypes = {
     value: PropTypes.string,
     onChangeText: PropTypes.func,
-    onSubmitText: PropTypes.func
+    onSubmitText: PropTypes.func,
+    setInputField: PropTypes.func.isRequired,
+    text: PropTypes.string
   }
 
   onChangeText = text => {
-    const { onChangeText } = this.props
-
-    if (onChangeText) {
-      onChangeText(text)
-    }
+    this.props.setInputField(text)
   }
 
   render() {
-    const { value, onSubmitText } = this.props
+    const { text, onSubmitText } = this.props
 
     return (
       <TextInput
         style={styles.textInput}
-        value={value}
+        value={text}
         autoCapitalize='none'
         onChangeText={this.onChangeText}
         onSubmitEditing={onSubmitText}
@@ -34,3 +38,5 @@ export default class Input extends Component {
     )
   }
 }
+
+export default connect(mapStateToProps, { setInputField })(Input)

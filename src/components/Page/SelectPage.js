@@ -22,8 +22,7 @@ export default class SelectPage extends Component {
   }
 
   render() {
-    const PageName = this.components[`page${this.props.page}`] || this.components['page12']
-    console.log('PageName = ', PageName)
+    const PageName = this.components[`page${this.props.page}`] || this.components.page12
 
     return (
       <PageName
@@ -31,8 +30,4 @@ export default class SelectPage extends Component {
       />
     )
   }
-}
-
-SelectPage.defaultProps = {
-  page: 12
 }
