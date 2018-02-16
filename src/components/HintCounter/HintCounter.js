@@ -14,9 +14,9 @@ export default class HintCounter extends Component {
     const { page, hint } = this.props
 
     return (
-      <View>
+      <View style={styles.hintView}>
         { page > 0 ?
-          <View style={styles.hintView}>
+          <View>
             <Text style={styles.hintText}>
               Подсказок: {hint}
             </Text>
