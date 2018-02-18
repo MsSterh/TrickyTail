@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, TouchableHighlight, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import PropTypes from 'prop-types'
 
 import styles from './styles'
@@ -15,7 +15,7 @@ export default class Button extends Component {
 
     return (
       <View style={styles.view}>
-        <TouchableHighlight
+        <TouchableOpacity
           onPress={onPress}
           style={styles.buttonContainer}>
           <View style={styles.buttonView}>
@@ -23,7 +23,7 @@ export default class Button extends Component {
               {text}
             </Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     )
   }

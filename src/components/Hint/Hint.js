@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, TouchableHighlight, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -33,7 +33,7 @@ class Hint extends Component {
     return (
       <View style={styles.container}>
         { !this.state.clicked ?
-          <TouchableHighlight
+          <TouchableOpacity
             onPress={this.onPress}
             style={styles.link}>
             <View style={styles.linkView}>
@@ -41,11 +41,16 @@ class Hint extends Component {
                 Подсказка №{count} ⇨
               </Text>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
           :
-          <Text style={styles.text}>
-            "{text}"
-          </Text>
+          <View style={styles.textView}>
+            <Text style={styles.title}>
+              Подсказка №{count}:
+            </Text>
+            <Text style={styles.text}>
+              "{text}"
+            </Text>
+          </View>
         }
       </View>
     )
