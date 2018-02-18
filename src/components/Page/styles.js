@@ -21,8 +21,7 @@ export default StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0,
-    resizeMode: 'repeat'
+    bottom: 0
   },
   title: {
     color: COLORS.TITLE,
@@ -50,6 +49,46 @@ export default StyleSheet.create({
   },
   fox1: {
     height: WIDTH * 669 / 703,
+    width: WIDTH
+  },
+  fox2: {
+    height: WIDTH * 389 / 691,
+    width: WIDTH
+  },
+  fox3: {
+    height: WIDTH * 503 / 709,
+    width: WIDTH
+  },
+  fox4: {
+    height: WIDTH * 720 / 678,
+    width: WIDTH
+  },
+  fox5: {
+    height: WIDTH * 752 / 749,
+    width: WIDTH
+  },
+  fox6: {
+    height: WIDTH * 791 / 635,
+    width: WIDTH
+  },
+  fox7: {
+    height: WIDTH * 579 / 709,
+    width: WIDTH
+  },
+  fox8: {
+    height: WIDTH * 313 / 706,
+    width: WIDTH
+  },
+  fox9: {
+    height: WIDTH * 310 / 740,
+    width: WIDTH
+  },
+  fox10: {
+    height: WIDTH * 663 / 750,
+    width: WIDTH
+  },
+  fox11: {
+    height: WIDTH * 270 / 704,
     width: WIDTH
   }
 })

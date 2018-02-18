@@ -55,12 +55,14 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Stash />
-        <ScrollView ref={ref => {
-          this.scrollView = ref
-        }}>
+        <ScrollView
+          ref={ref => {
+            this.scrollView = ref
+          }}>
           <Image
             source={bgImage}
             style={styles.bg}
+            resizeMode='repeat'
           />
           <SelectPage
             page={page}
