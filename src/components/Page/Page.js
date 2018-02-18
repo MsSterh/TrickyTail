@@ -29,13 +29,17 @@ class App extends Component {
     input: PropTypes.string
   }
 
-  goToNextPage = () => {
+  checkKey = () => {
     if (this.props.input === KEYS[this.props.page]) {
       this.props.setInputField('')
       this.props.setPage(this.props.page + 1)
     } else {
       this.props.setInputField('не-а')
     }
+  }
+
+  goToNextPage = () => {
+    this.props.setPage(this.props.page + 1)
   }
 
   render() {
@@ -51,7 +55,8 @@ class App extends Component {
           />
           <SelectPage
             page={page}
-            onClick={this.goToNextPage}
+            onClick={this.checkKey}
+            goToNextPage={this.goToNextPage}
           />
           <HintCounter
             page={page}

@@ -10,7 +10,8 @@ import Page12 from './Page12'
 export default class SelectPage extends Component {
   static propTypes = {
     page: PropTypes.number.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    goToNextPage: PropTypes.func.isRequired
   }
 
   components = {
@@ -27,6 +28,7 @@ export default class SelectPage extends Component {
     return (
       <PageName
         onClick={this.props.onClick}
+        goToNextPage={this.props.goToNextPage}
       />
     )
   }

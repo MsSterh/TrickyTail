@@ -9,7 +9,7 @@ import fox1 from '../../images/fox/f1.png'
 
 export default class Page0 extends Component {
   static propTypes = {
-    onClick: PropTypes.func.isRequired
+    goToNextPage: PropTypes.func.isRequired
   }
 
   showAlert = () => {
@@ -26,7 +26,7 @@ export default class Page0 extends Component {
           text: 'Ладно, давай играть',
           onPress: (password) => {
             if (password.toLowerCase() === 'пожалуйста') {
-              this.props.onClick()
+              this.props.goToNextPage()
             }
           }
         }
@@ -35,7 +35,7 @@ export default class Page0 extends Component {
   }
 
   render() {
-    const { onClick } = this.props
+    const { goToNextPage } = this.props
 
     return (
       <View style={styles.containerView}>
@@ -63,7 +63,7 @@ export default class Page0 extends Component {
 
         <Button
           text="Сыграть"
-          onPress={onClick}
+          onPress={goToNextPage}
         />
 
         <Button
