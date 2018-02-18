@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import styles from './styles'
 import Button from '../Button'
 
-import fox1 from '../../images/fox/f1.png'
+import fox0 from '../../images/fox/f0.png'
 
 export default class Page0 extends Component {
   static propTypes = {
@@ -47,8 +47,8 @@ export default class Page0 extends Component {
         </Text>
         <View style={styles.foxImg}>
           <Image
-            source={fox1}
-            style={styles.fox1}
+            source={fox0}
+            style={styles.fox0}
           />
         </View>
         <Text style={styles.paragraph}>

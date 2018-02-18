@@ -7,7 +7,7 @@ import Hint from '../Hint'
 import Button from '../Button'
 import Input from '../Input'
 
-import fox3 from '../../images/fox/f3.png'
+import fox2 from '../../images/fox/f2.png'
 
 export default class Page2 extends Component {
   static propTypes = {
@@ -30,8 +30,8 @@ export default class Page2 extends Component {
         </Text>
         <View style={styles.foxImg}>
           <Image
-            source={fox3}
-            style={styles.fox3}
+            source={fox2}
+            style={styles.fox2}
           />
         </View>
         <Text style={styles.paragraph}>

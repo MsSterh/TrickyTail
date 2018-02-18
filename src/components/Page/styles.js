@@ -47,47 +47,43 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center'
   },
-  fox1: {
+  fox0: {
     height: WIDTH * 669 / 703,
     width: WIDTH
   },
-  fox2: {
+  fox1: {
     height: WIDTH * 389 / 691,
     width: WIDTH
   },
-  fox3: {
+  fox2: {
     height: WIDTH * 503 / 709,
     width: WIDTH
   },
-  fox4: {
+  fox3: {
     height: WIDTH * 720 / 678,
     width: WIDTH
   },
-  fox5: {
-    height: WIDTH * 752 / 749,
-    width: WIDTH
-  },
-  fox6: {
+  fox4: {
     height: WIDTH * 791 / 635,
     width: WIDTH
   },
-  fox7: {
+  fox5: {
     height: WIDTH * 579 / 709,
     width: WIDTH
   },
-  fox8: {
+  fox6: {
     height: WIDTH * 313 / 706,
     width: WIDTH
   },
-  fox9: {
+  fox7: {
     height: WIDTH * 310 / 740,
     width: WIDTH
   },
-  fox10: {
+  fox8: {
     height: WIDTH * 663 / 750,
     width: WIDTH
   },
-  fox11: {
+  fox9: {
     height: WIDTH * 270 / 704,
     width: WIDTH
   }
