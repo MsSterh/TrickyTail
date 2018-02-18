@@ -41,6 +41,9 @@ export default StyleSheet.create({
   paragraphCenter: {
     textAlign: 'center'
   },
+  textLine: {
+    flex: 1
+  },
   foxImg: {
     flex: 1,
     alignItems: 'center'

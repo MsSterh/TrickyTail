@@ -18,17 +18,39 @@ export default class Page1 extends Component {
     return (
       <View style={styles.containerView}>
         <Text style={styles.title}>
-          Page 1
+          Отлично!
         </Text>
         <Text style={styles.paragraph}>
-          Press Cmd+R to reload,\n Cmd+D or shake for dev menu
+          Ну значит так, практиковался я давеча в стихосложении и сочинил. Слушай:
+        </Text>
+        <Text style={styles.paragraph}>
+          <Text style={styles.textLine}>
+            В комнате было два стула.
+          </Text>
+          Они были как братья,
+          Один другого краше.
+          Второй правда скрипучей.
+        </Text>
+
+        <Text style={styles.paragraph}>
+          И как-то в дом явилась
+          Еще одна машина,
+          Ее боялись стулья,
+          И прятались на стол.
+        </Text>
+
+        <Text style={styles.paragraph}>
+          Когда ты станешь страшным,
+          Как белая машина,
+          Тебе откроет тайну
+          Один из седоков.
         </Text>
 
         <Input
           onSubmitText={onClick}
         />
         <Button
-          text="Click on me"
+          text="Я знаю ответ!"
           onPress={onClick}
         />
 

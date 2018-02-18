@@ -3,7 +3,7 @@ import { COLORS } from '../../constants'
 
 export default StyleSheet.create({
   hintView: {
-    backgroundColor: COLORS.FONT,
+    backgroundColor: COLORS.FONT_LIGHT,
     borderRadius: 20,
     position: 'absolute',
     top: 20,

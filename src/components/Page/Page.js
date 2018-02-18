@@ -29,17 +29,24 @@ class App extends Component {
     input: PropTypes.string
   }
 
-  checkKey = () => {
-    if (this.props.input === KEYS[this.props.page]) {
-      this.props.setInputField('')
-      this.props.setPage(this.props.page + 1)
-    } else {
-      this.props.setInputField('не-а')
-    }
+  scrollToTop = () => {
+    setTimeout(() => {
+      this.scrollView.scrollTo({x: 0, y: 0, animated: true})
+    }, 50)
   }
 
   goToNextPage = () => {
     this.props.setPage(this.props.page + 1)
+    this.scrollToTop()
+  }
+
+  checkKey = () => {
+    if (this.props.input === KEYS[this.props.page]) {
+      this.props.setInputField('')
+      this.goToNextPage()
+    } else {
+      this.props.setInputField('не-а')
+    }
   }
 
   render() {
@@ -48,7 +55,9 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Stash />
-        <ScrollView>
+        <ScrollView ref={ref => {
+          this.scrollView = ref
+        }}>
           <Image
             source={bgImage}
             style={styles.bg}
