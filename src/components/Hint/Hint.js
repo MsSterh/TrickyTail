@@ -10,7 +10,8 @@ import styles from './styles'
 class Hint extends Component {
   static propTypes = {
     count: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    incHint: PropTypes.func.isRequired
   }
 
   constructor(props) {

@@ -35,7 +35,7 @@ export default class Page6 extends Component {
           Хррр-рр-рр-р-ррр...
         </Text>
         <Text style={styles.title}>
-          Ой! Мамочки-лисёночки! 
+          Ой! Мамочки-лисёночки!
         </Text>
         <View style={styles.foxImg}>
           <Image
