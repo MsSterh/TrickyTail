@@ -10,7 +10,7 @@ import styles from './styles'
 import SelectPage from './SelectPage'
 import HintCounter from '../HintCounter'
 import Stash from '../Stash'
-import { KEYS } from '../../constants'
+import { KEYS, TEST_KEYS } from '../../constants'
 
 import bgImage from '../../images/bg/bg.jpg'
 
@@ -41,7 +41,8 @@ class App extends Component {
   }
 
   checkKey = () => {
-    if (this.props.input === KEYS[this.props.page]) {
+    if (this.props.input.toLowerCase() === TEST_KEYS[this.props.page].toLowerCase() ||
+      this.props.input.toLowerCase() === KEYS[this.props.page].toLowerCase()) {
       this.props.setInputField('')
       this.goToNextPage()
     } else {
