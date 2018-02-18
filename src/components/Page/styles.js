@@ -1,6 +1,8 @@
 import { StyleSheet, Dimensions } from 'react-native'
 import { COLORS, SIZES } from '../../constants'
 
+const WIDTH = Dimensions.get('window').width - 2 * SIZES.PADDING
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -9,8 +11,7 @@ export default StyleSheet.create({
   },
   containerView: {
     flex: 1,
-    justifyContent: 'center',
-    padding: 10,
+    paddingVertical: SIZES.PADDING,
     minHeight: Dimensions.get('window').height
   },
   bg: {
@@ -24,27 +25,28 @@ export default StyleSheet.create({
     resizeMode: 'repeat'
   },
   title: {
+    color: COLORS.TITLE,
     fontSize: SIZES.TITLE,
     textAlign: 'center',
+    paddingHorizontal: SIZES.PADDING,
     marginVertical: 10
   },
   paragraph: {
-    fontSize: SIZES.FONT,
-    textAlign: 'center',
     color: COLORS.FONT,
+    fontSize: SIZES.FONT,
+    lineHeight: SIZES.FONT * 1.4,
+    paddingHorizontal: SIZES.PADDING,
     marginVertical: 10
   },
-  hintView: {
-    backgroundColor: COLORS.FONT,
-    borderRadius: 20,
-    position: 'absolute',
-    top: 20,
-    right: 10
+  paragraphCenter: {
+    textAlign: 'center'
   },
-  hintText: {
-    color: COLORS.BG,
-    fontSize: 12,
-    paddingVertical: 5,
-    paddingHorizontal: 10
+  foxImg: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  fox1: {
+    height: WIDTH * 669 / 703,
+    width: WIDTH
   }
 })
