@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, Image } from 'react-native'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -9,7 +9,10 @@ import { setInputField } from '../../actions/input'
 import styles from './styles'
 import SelectPage from './SelectPage'
 import HintCounter from '../HintCounter'
+import Stash from '../Stash'
 import { KEYS } from '../../constants'
+
+import bgImage from '../../images/bg/bg.jpg'
 
 const mapStateToProps = state => ({
   page: state.page.current,
@@ -40,7 +43,12 @@ class App extends Component {
 
     return (
       <View style={styles.container}>
+        <Stash />
         <ScrollView>
+          <Image
+            source={bgImage}
+            style={styles.bg}
+          />
           <SelectPage
             page={page}
             onClick={this.goToNextPage}

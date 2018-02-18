@@ -13,6 +13,16 @@ export default StyleSheet.create({
     padding: 10,
     minHeight: Dimensions.get('window').height
   },
+  bg: {
+    flex: 1,
+    width: Dimensions.get('window').width,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    resizeMode: 'repeat'
+  },
   title: {
     fontSize: SIZES.TITLE,
     textAlign: 'center',
