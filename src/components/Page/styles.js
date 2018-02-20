@@ -23,6 +23,9 @@ export default StyleSheet.create({
     right: 0,
     bottom: 0
   },
+  bgTop: {
+    top: 120
+  },
   title: {
     color: COLORS.TITLE,
     fontSize: SIZES.TITLE,

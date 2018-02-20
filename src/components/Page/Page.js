@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, Image } from 'react-native'
+import { View, ScrollView, Image, KeyboardAvoidingView } from 'react-native'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -55,26 +55,33 @@ class App extends Component {
 
     return (
       <View style={styles.container}>
-        <Stash />
-        <ScrollView
-          ref={ref => {
-            this.scrollView = ref
-          }}>
-          <Image
-            source={bgImage}
-            style={styles.bg}
-            resizeMode='repeat'
-          />
-          <SelectPage
-            page={page}
-            onClick={this.checkKey}
-            goToNextPage={this.goToNextPage}
-          />
-          <HintCounter
-            page={page}
-            hint={hint}
-          />
-        </ScrollView>
+        <Image
+          source={bgImage}
+          style={[styles.bg, styles.bgTop]}
+          resizeMode='repeat'
+        />
+        <KeyboardAvoidingView behavior={'padding'}>
+          <Stash />
+          <ScrollView
+            ref={ref => {
+              this.scrollView = ref
+            }}>
+            <Image
+              source={bgImage}
+              style={styles.bg}
+              resizeMode='repeat'
+            />
+            <SelectPage
+              page={page}
+              onClick={this.checkKey}
+              goToNextPage={this.goToNextPage}
+            />
+            <HintCounter
+              page={page}
+              hint={hint}
+            />
+          </ScrollView>
+        </KeyboardAvoidingView>
       </View>
     )
   }
